@@ -57,7 +57,7 @@ class _HalloweenGameScreenState extends State<HalloweenGameScreen> {
   }
 
   void _playBackgroundMusic() async {
-    await _audioPlayer.play('assets/spooky_music.mp3', isLocal: true);
+    await _audioPlayer.play('assets/spooky_music(1).mp3', isLocal: true);
     _audioPlayer.onPlayerCompletion.listen((event) {
       _audioPlayer.play('assets/spooky_music.mp3', isLocal: true);
     });
@@ -91,7 +91,7 @@ class _HalloweenGameScreenState extends State<HalloweenGameScreen> {
       setState(() {
         _attempts -= 1;
       });
-      _playSoundEffect('assets/jump_scare.mp3');
+      _playSoundEffect('assets/jump_scare(1).mp3');
 
       if (_attempts == 0) {
         _showGameOverDialog();
@@ -104,7 +104,7 @@ class _HalloweenGameScreenState extends State<HalloweenGameScreen> {
       setState(() {
         _isCorrectItemFound = true;
       });
-      _playSoundEffect('assets/success_sound.mp3');
+      _playSoundEffect('assets/success_sound(1).mp3');
       showDialog(
         context: context,
         builder: (_) => AlertDialog(
